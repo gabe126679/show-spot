@@ -1,0 +1,23 @@
+extends layout 
+
+block content
+  br
+  h6 Welcome to ShowSpot!
+  br
+  .container.login-container
+    .row
+      .col-md-6.login-form-1
+        
+        h3 Sign up and start Spotting Shows!
+        form(method='POST', action='/register') 
+          .form-group
+            input.form-control(type='text' name='username' placeholder='Your Username *' value='')
+          .form-group
+            input.form-control(type='password' name='password' placeholder='Your password *' value='')
+          br
+          .form-group
+            input.btnSubmit(type='submit' value='Submit')
+          br
+          a.ForgetPwd(href='#' value='button') Forget Password?
+          br
+          a(href='/login' value='button') Click here to Log in

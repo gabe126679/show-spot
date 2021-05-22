@@ -1,0 +1,12 @@
+extends artLayout
+
+block content
+  h1 Pending Shows
+  br
+  p Shows where all artists and the venue have accepted an invitation to play/host the show. Count on them being there. Musicians are know for their reliability.
+  br
+  ul.list-group
+    each show in shows
+      li.list-group-item
+        a(href='/showBill/'+show._id)= show.headliner
+

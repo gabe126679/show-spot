@@ -1,0 +1,11 @@
+extends venLayout 
+
+block content
+  h1 Venue Invites
+  br
+
+  ul.list-group
+    each show in shows
+      li.list-group-item
+        a(href='/venInviteForm/'+show._id)= show.venueChoice
+

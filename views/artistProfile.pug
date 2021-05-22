@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1 Artist Profile
+  br
+
+  ul.list-group
+    
+    h4 Artist Name
+    li.list-group-item
+      p= artists.firstname 
+      p= artists.lastname
+    
+    h4 Main Instrument  
+    li.list-group-item
+      p= artists.maininstrument
+

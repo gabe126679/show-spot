@@ -1,0 +1,30 @@
+extends layout 
+
+block content
+  br
+  h6 Welcome to ShowSpot!
+  br
+  .container.login-container
+    .row
+
+      h3 Promote 1-5 of your favorite artists in a show
+      br
+      .col-md-6.login-form-2
+        form(method='POST' action='/promoteAshow')
+          .form-group
+            input.form-control(type='text' name='headliner' placeholder='Your chosen headliner *' value='')
+          .form-group
+            input.form-control(type='text' name='almost' placeholder='Your chosen almost*' value='')
+          .form-group
+            input.form-control(type='text' name='middle' placeholder='Your chosen middle *' value='')
+          .form-group
+            input.form-control(type='text' name='nextArt' placeholder='Your chosen next *' value='')
+          .form-group
+            input.form-control(type='text' name='opener' placeholder='Your chosen opener *' value='')
+          .form-group
+            input.form-control(type='text' name='venueChoice' placeholder='Your Venue Choice *' value='')
+          .form-group
+            input.form-control(type='date' name='date' placeholder=' Your Chosen Date *' value='')
+          br
+          .form-group  
+            input.btnSubmit(type='submit' value='Submit')

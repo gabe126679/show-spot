@@ -1,0 +1,22 @@
+extends venLayout 
+
+block content
+  br
+  h6 Welcome to ShowSpot!
+  br
+  .container.login-container
+    .row
+
+      h3 Register as a Venue:
+      br
+      .col-md-6.login-form-2
+        form(method='POST', action='/venReg')
+          .form-group
+            input.form-control(type='text' name='venuename' placeholder='Venue Name *' value="")
+          .form-group
+            input.form-control(type='text' name='address' placeholder='Venue Address *' value="")
+          .form-group
+              input.form-control(type='text' name='maxcap' placeholder='Maximum Capacity *' value="")     
+          br
+          .form-group
+            input.btnSubmit(type='submit' value='Submit')

@@ -1,0 +1,24 @@
+extends artLayout
+
+block content
+  br
+  h6 Headliner Invitation
+  br
+  .container.login-container
+    .row
+      .col-md-6.login-form-1
+        
+        h3 Do you accept this invite?
+        br
+        p= show.headliner 
+        p= show.venueChoice 
+        
+
+        form(method='POST', action='/artInviteForm/'+show._id) 
+          .form-group
+                
+            input.btnSubmit(type='submit' value='Submit' )
+          br
+        a.btn.btn-outline-primary.btn.sml(type='button' href='/artDash') Decline Show
+
+

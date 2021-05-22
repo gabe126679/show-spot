@@ -1,0 +1,35 @@
+extends layout
+
+block content
+  h1= show.headliner
+  br
+  ul.list-group
+   
+    h4 Current Lineup
+    
+    li.list-group-item
+      | headliner:     
+      h3= show.headliner
+      | almost:
+      p= show.almost 
+      | middle:
+      p= show.middle
+      | next:
+      p= show.nextartist 
+      | opener:
+      p= show.opener
+    
+    
+    li.list-group-item
+      | venue:
+      h3= show.venueChoice
+      | date:
+      p= show.date 
+    br
+    h3 Are you sure you want to delete this show?
+    br
+
+    form(method='POST', action='/showBillDelete/'+show._id) 
+      .form-group
+                
+      input.btnSubmit(type='submit' value='Submit' )

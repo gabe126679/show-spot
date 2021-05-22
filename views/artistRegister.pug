@@ -1,0 +1,22 @@
+extends layout 
+
+block content
+  br
+  h6 Welcome to ShowSpot!
+  br
+  .container.login-container
+    .row
+
+      h3 Register as an Artist:
+      br
+      .col-md-6.login-form-2
+        form(method='POST', action='/artReg')
+          .form-group
+            input.form-control(type='text' name='firstname' placeholder='Your First Name *' value="")
+          .form-group
+            input.form-control(type='text' name='lastname' placeholder='Your Last Name *' value="")
+          .form-group
+              input.form-control(type='text' name='maininstrument' placeholder='Your Main Instrument *' value="")     
+          br
+          .form-group
+            input.btnSubmit(type='submit' value='Submit')

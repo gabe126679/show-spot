@@ -1,0 +1,26 @@
+extends layout 
+
+block content
+  br
+  h6 Welcome to ShowSpot!
+  br
+  .container.login-container
+    .row
+
+      h3 Log in here:
+      br
+      .col-md-6.login-form-2
+        form(method='POST', action='/login')
+          .form-group
+            input.form-control(type='text' name='username' placeholder='Your Username *' value='')
+          .form-group
+            input.form-control(type='password' name='password' placeholder='Your Password *' value='')
+          br
+          .form-group
+            a(href="/showBank")  
+              input.btnSubmit(type='submit' value='Submit')
+          br
+          .form-group
+            a.ForgetPwd(href='#' value='Login') Forget Password?
+            br
+            a(href='/register' value='button') Click here to Register            

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1 Artists
+  br
+
+  ul.list-group
+    each artist in user
+      li.list-group-item
+        a(href="/artistProfile/"+artist._id)= artist.firstname
+        
+

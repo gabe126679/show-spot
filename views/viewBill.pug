@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= show.headliner
+  br
+  ul.list-group
+   
+    h4 Current Lineup
+    
+    li.list-group-item
+      | headliner:     
+      h3= show.headliner
+      | almost:
+      h3= show.almost 
+      | middle:
+      h3= show.middle
+      | next:
+      h3= show.nextartist 
+      | opener:
+      h3= show.opener
+    
+    
+    li.list-group-item
+      | venue:
+      h3= show.venueChoice
+      | date:
+      h3= show.date 
+
+

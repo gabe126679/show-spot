@@ -1,0 +1,11 @@
+extends artLayout
+
+block content
+  h1 Artist Invites  
+  br
+
+  ul.list-group
+    each show in shows
+      li.list-group-item
+        a(href='/artInviteForm/'+show._id)= show.headliner
+
