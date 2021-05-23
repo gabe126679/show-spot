@@ -9,10 +9,10 @@ const methodOverride = require('method-override')
 
 const app = express()
 
-
+MONGODB_URI="mongodb+srv://gabe126:retard7861BT@cluster0.u93vl.mongodb.net/cluster0?retryWrites=true&w=majority"
 
 // mongodb connection 
-mongoose.connect(mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(MONGODB_URI) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true}
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'))
