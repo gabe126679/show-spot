@@ -470,5 +470,5 @@ function venueChoiceInvited (req, res, next) {
     res.redirect('/artDash')
   }
 }
-
-app.listen(process.env.PORT || 3000)
+port = process.env.PORT || 3000
+app.listen(port)
