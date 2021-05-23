@@ -12,7 +12,7 @@ const app = express()
 
 
 // mongodb connection 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'))
