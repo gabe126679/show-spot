@@ -7,9 +7,9 @@
     "npm": "6.x"
   },
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": " npm run build --prod",
+    "build": "",
+    "install-client": "",
+    "heroku-postbuild": "",
     "start": "node app"
   },
   "engine": {
