@@ -10,6 +10,7 @@ const methodOverride = require('method-override')
 const app = express()
 
 
+
 // mongodb connection 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true})
 
@@ -102,6 +103,7 @@ app.post('/artReg', checkAuthenticated, async (req, res) => {
         maininstrument: req.body.maininstrument,
         artistVerification: 1
       }, {new : true})
+      res.render('artistDashboard')
   } catch (error) {
     res.redirect('/artReg')
   }   
