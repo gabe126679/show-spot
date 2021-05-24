@@ -9,7 +9,7 @@ const methodOverride = require('method-override')
 
 const app = express()
 
-MONGODB_URI="mongodb+srv://gabe126:retard7861BT@cluster0.u93vl.mongodb.net/cluster0?retryWrites=true&w=majority"
+const MONGODB_URI="mongodb+srv://gabe126:retard7861BT@cluster0.u93vl.mongodb.net/cluster0?retryWrites=true&w=majority"
 
 // mongodb connection 
 mongoose.connect(MONGODB_URI) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true}
@@ -105,7 +105,12 @@ app.post('/artReg', checkAuthenticated, async (req, res) => {
       }, {new : true})
       res.render('artistDashboard')
   } catch (error) {
-    res.redirect('/artReg')
+    if (error) {
+      res.redirect('/artReg')
+    }
+    else {
+      res.redirect('/artDash')
+    }
   }   
 })
 
@@ -133,7 +138,12 @@ app.post('/promoteAshow', checkAuthenticated, async (req, res) => {
   
         res.render('index')
   } catch (error) {
-    res.redirect('/promoteAshow')
+    if (error) {
+      res.redirect('/login')
+    }
+    else {
+      res.redirect('/promoteAshow')
+    }
   }
 })
 
@@ -386,7 +396,7 @@ app.get('/venShowBank', async (req, res) => {
     if (err) {
       console.log(err)
     } else {
-      res.render('venShowbank', {
+      res.render('venShowBank', {
         title: 'shows',
         shows: shows
       })
