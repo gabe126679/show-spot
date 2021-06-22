@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  h1= show.headliner
+  h1= show.headliner + " " + show.hlLast
   br
   ul.list-group
    
@@ -9,13 +9,13 @@ block content
     
     li.list-group-item
       | headliner:     
-      h3= show.headliner
+      h3= show.headliner + " " + show.hlLast
       | almost:
-      h3= show.almost 
+      h3= show.almost
       | middle:
       h3= show.middle
       | next:
-      h3= show.nextartist 
+      h3= show.nextartist
       | opener:
       h3= show.opener
     

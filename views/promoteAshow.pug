@@ -12,15 +12,30 @@ block content
       .col-md-6.login-form-2
         form(method='POST' action='/promoteAshow')
           .form-group
-            input.form-control(type='text' name='headliner' placeholder='Your chosen headliner *' value='')
+            input.form-control(type='text' name='headliner' placeholder='Headliner First Name ' value='')
           .form-group
-            input.form-control(type='text' name='almost' placeholder='Your chosen almost*' value='')
+            input.form-control(type='text' name='hlLast' placeholder='Headliner Last Name ' value='')
+          br
           .form-group
-            input.form-control(type='text' name='middle' placeholder='Your chosen middle *' value='')
+            input.form-control(type='text' name='almost' placeholder='Almost First Name' value='')
           .form-group
-            input.form-control(type='text' name='nextArt' placeholder='Your chosen next *' value='')
+            input.form-control(type='text' name='alLast' placeholder='Almost Last Name' value='')
+          br
           .form-group
-            input.form-control(type='text' name='opener' placeholder='Your chosen opener *' value='')
+            input.form-control(type='text' name='middle' placeholder='Middle First Name' value='')
+          .form-group
+            input.form-control(type='text' name='mdLast' placeholder='Middle Last Name' value='')
+          br
+          .form-group
+            input.form-control(type='text' name='nextArt' placeholder='Next First Name' value='')
+          .form-group
+            input.form-control(type='text' name='naLast' placeholder='Next Last Name' value='')
+          br
+          .form-group
+            input.form-control(type='text' name='opener' placeholder='Opener First Name' value='')
+          .form-group
+            input.form-control(type='text' name='opLast' placeholder='Opener Last Name' value='')
+          br
           .form-group
             input.form-control(type='text' name='venueChoice' placeholder='Your Venue Choice *' value='')
           .form-group

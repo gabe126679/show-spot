@@ -7,5 +7,5 @@ block content
   ul.list-group
     each show in shows
       li.list-group-item
-        a(href='/artInviteForm/'+show._id)= show.headliner
+        a(href='/artInviteForm/'+show._id)= show.headliner + " " + show.hlLast
 

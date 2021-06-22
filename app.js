@@ -53,6 +53,8 @@ app.get('/', checkAuthenticated, (req, res) => {
     })
 })
 
+
+
 app.get('/login', checkNotAuthenticated, (req, res) => {
   res.render('login')
 })
@@ -126,10 +128,15 @@ app.post('/promoteAshow', checkAuthenticated, async (req, res) => {
   try {
     let show = await Show.create({
       headliner: req.body.headliner,
+      hlLast: req.body.hlLast,
       almost: req.body.almost,
+      alLast: req.body.alLast,
       middle: req.body.middle,
+      mdLast: req.body.mdLast,      
       next: req.body.nextArt,
+      naLast: req.body.naLast,
       opener: req.body.opener,
+      opLast: req.body.opLast,
       venueChoice: req.body.venueChoice,
       spotter: req.user._id
     })
@@ -480,5 +487,5 @@ function venueChoiceInvited (req, res, next) {
     res.redirect('/artDash')
   }
 }
-port = process.env.PORT || 3000
+port = process.env.PORT || 3009
 app.listen(port)

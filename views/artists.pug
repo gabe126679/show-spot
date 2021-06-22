@@ -7,6 +7,6 @@ block content
   ul.list-group
     each artist in user
       li.list-group-item
-        a(href="/artistProfile/"+artist._id)= artist.firstname
+        a(href="/artistProfile/"+artist._id)= artist.firstname + " " + artist.lastname
         
 

@@ -5,7 +5,15 @@ const showSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    hlLast :{
+        type: String,
+        required: true
+    },
     almost :{
+        type: String,
+        required: false
+    },
+    alLast :{
         type: String,
         required: false
     },
@@ -13,11 +21,23 @@ const showSchema = mongoose.Schema({
         type: String,
         required: false
     },
+    mdLast :{
+        type: String,
+        required: false
+    },
     nextartist :{
         type: String,
         required: false
     },
+    naLast :{
+        type: String,
+        required: false
+    },
     opener:{
+        type: String,
+        required: false
+    },
+    opLast :{
         type: String,
         required: false
     },

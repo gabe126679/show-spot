@@ -8,7 +8,7 @@ block content
   ul.list-group
     each show in shows
       li.list-group-item
-        a.btn.btn-outline-primary(href='/showBill/'+show._id)= show.headliner
+        a.btn.btn-outline-primary(href='/showBill/'+show._id)= show.headliner + " " + show.hlLast
         br
         | at...
         br
