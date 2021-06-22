@@ -1,3 +1,6 @@
+const dotenv = require("dotenv")
+
+dotenv.config()
 const express = require('express')
 const path = require('path')
 const flash = require('connect-flash')
@@ -9,10 +12,10 @@ const methodOverride = require('method-override')
 
 const app = express()
 
-const MONGODB_URI= "mongodb+srv://gabe126:retard7861BT@cluster0.u93vl.mongodb.net/cluster0?retryWrites=true&w=majority"
+const verb = process.env.MONGODB_URI
 
 // mongodb connection 
-mongoose.connect(MONGODB_URI) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true}
+mongoose.connect(verb) || 'mongodb://localhost/origin', {useNewUrlParser: true, useUnifiedTopology: true}
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'))
